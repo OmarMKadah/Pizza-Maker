@@ -15,16 +15,16 @@
         <div class="col-md-6">
           <hr>
           <h2>Customize your Order</h2>
-          <form id="new-movie">
+          <form id="new-pizza">
             <div class="form-group">
               <label for="age">Select Size:</label>
-              <select class="form-control" id="pizzas">
+              <select class="form-control" id="size">
                 <option value="8">Personal (8")</option>
                 <option value="12">Medium (12")</option>
                 <option value="16">Family Size (16")</option>
               </select>
               <label for="age">Select Crust:</label>
-              <select class="form-control" id="pizzas">
+              <select class="form-control" id="crust">
                 <option value="pan">Pan</option>
                 <option value="thin">Thin Crust</option>
                 <option value="gluten">Gluten Free</option>
@@ -35,7 +35,7 @@
                 <option value="garlic">Garlic Sauce</option>
               </select>
               <p>Select your toppings</p>
-                <div class="checkbox" id="toppings">
+                <fieldset class="checkbox" id="toppings">
                   <ol class="left">
                     <li><input type="checkbox" name="topping" id="cheese" value="cheese">Cheese</li>
                     <li><input type="checkbox" name="topping" id="pep" value="pep">Pepperoni</li>
@@ -45,7 +45,7 @@
                     <li><input type="checkbox" name="topping" id="pine" value="pine">Pineapple</li>
                     <li><input type="checkbox" name="topping" id="jal" value="jal">Jalapeno</li>
                     <li><input type="checkbox" name="topping" id="onion" value="onion">Onion</li>
-                </div>
+                </fieldset>
             </div>
             <button type="submit" class="btn-primary">Place Order!</button>
             <button type="submit" class="btn-more">More</button>
