@@ -2,11 +2,11 @@ function Pizza(size, crust, sauce, topping) {
   this.size = size;
   this.crust = crust;
   this.sauce = sauce;
-  this.topping = topping;
+  this.toppings = topping;
 }
 
 // Pizza.prototype.calcPrice = (function) {
-//   var cost = this.movie.price;
+//   var cost = this.pizza.price;
 // }
 
 function pizzaToppings () {
@@ -14,6 +14,7 @@ function pizzaToppings () {
   $("#topping-select input:checkbox[name='topping']:checked").each(function(topping){
     toppings.push($(this).val());
   });
+  return toppings;
 }
 
 
@@ -26,11 +27,10 @@ $(document).ready(function() {
     event.preventDefault();
     var inputSize = $("#size").val();
     var inputCrust = $("#crust").val();
-    var inputSauce = $("#sauce").text();
-    // console.log(inputMovie + inputPrice);
-    $("topping-select").val();
+    var inputSauce = $("#sauce").val();
+    var inputTopping = pizzaToppings();
     var pizzaPrice = new Pizza (inputSize, inputCrust, inputSauce);
     console.log(pizzaPrice);
-    // $(".ticketprice").text(ticketPrice.calcPrice());
+    // $(".ticketprice").text(pizzatPrice.calcPrice());
   })
 })
