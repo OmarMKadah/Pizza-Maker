@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-md-6">
           <hr>
-          <h2>Choose Your Crust</h2>
+          <h2>Customize your Order</h2>
           <form id="new-movie">
             <div class="form-group">
               <label for="age">Select Size:</label>
@@ -48,16 +48,23 @@
                 </div>
             </div>
             <button type="submit" class="btn-primary">Place Order!</button>
-            <button type="submit" class="btn-addition">More</button>
+            <button type="submit" class="btn-more">More</button>
           </form>
-          <form class="multiple" id="new-movie">
+          <form id="new-movie">
+          <hr>
+            <h2>Pizza #2</h2>
             <div class="form-group">
-              <label for="age">Select the number of Pizzas:</label>
+              <label for="age">Select Size:</label>
               <select class="form-control" id="pizzas">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <option value="8">Personal (8")</option>
+                <option value="12">Medium (12")</option>
+                <option value="16">Family Size (16")</option>
+              </select>
+              <label for="age">Select Crust:</label>
+              <select class="form-control" id="pizzas">
+                <option value="pan">Pan</option>
+                <option value="thin">Thin Crust</option>
+                <option value="gluten">Gluten Free</option>
               </select>
               <label for="time">Sauce Type:</label>
               <select class="form-control" id="sauce">
@@ -67,20 +74,22 @@
               <p>Select your toppings</p>
                 <div class="checkbox" id="toppings">
                   <ol class="left">
-                    <li><input type="checkbox" name="mush" id="mush" value="art">Mushrooms</li>
-                    <li><input type="checkbox" name="olive" id="olive" value="olive">Olives</li>
-                    <li><input type="checkbox" name="pep" id="pep" value="pep">Pepperoni</li>
-                    <li><input type="checkbox" name="pine" id="pine" value="pine">Pineapple</li>
-                    <li><input type="checkbox" name="jal" id="jal" value="jal">Jalapeno</li>
-                    <li><input type="checkbox" name="onion" id="onion" value="onion">Onion</li>
-                    <li><input type="checkbox" name="tom" id="tom" value="tom">Fresh Tomato</li>
+                    <li><input type="checkbox" name="topping" id="cheese" value="cheese">Cheese</li>
+                    <li><input type="checkbox" name="topping" id="pep" value="pep">Pepperoni</li>
+                    <li><input type="checkbox" name="topping" id="tom" value="tom">Fresh Tomato</li>
+                    <li><input type="checkbox" name="topping" id="olive" value="olive">Olives</li>
+                    <li><input type="checkbox" name="topping" id="mush" value="art">Mushrooms</li>
+                    <li><input type="checkbox" name="topping" id="pine" value="pine">Pineapple</li>
+                    <li><input type="checkbox" name="topping" id="jal" value="jal">Jalapeno</li>
+                    <li><input type="checkbox" name="topping" id="onion" value="onion">Onion</li>
                 </div>
             </div>
-            <button type="submit" class="btn-primary">Place Order!</button>
+            <button type="submit" class="btn-addition">Add to Order!</button>
           </form>
         </div>
         <div class="col-md-6">
-          <div id="show-contact">
+        <hr>
+          <div id="show-cost">
             <p>Pizza Cost:  $<span class="pizzacost"></span></p>
           </div>
         </div>
