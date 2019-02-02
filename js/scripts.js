@@ -5,8 +5,22 @@ function Pizza(size, crust, sauce, topping) {
   this.toppings = topping;
 }
 
-// Pizza.prototype.calcPrice = (function) {
-//   var cost = this.pizza.price;
+// Pizza.prototype.calcSizePrice = (function) {
+//   if (this.size === "8") {
+//     this.price += 2;
+//   } else if (this.size === "12") {
+//     this.price += 4;
+//   } else if (this.size === "16") {
+//     this.price += 6;
+//   }
+// }
+//
+// Pizza.prototype.calcToppingPrice = (function) {
+//   for (var i = 0; i < this.toppings.length; i++) {
+//   if (this.cheese[i]) {
+//     this.price += 1;
+//     }
+//   }
 // }
 
 function pizzaToppings () {
