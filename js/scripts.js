@@ -15,6 +15,25 @@ Pizza.prototype.calcSizePrice = function() {
   }
   console.log(this.price);
 }
+
+Pizza.prototype.calcCrustPrice = function () {
+  if (this.crust === "pan") {
+    this.price += 1;
+  } else if (this.crust === "thin") {
+    this.price += 2;
+  } else if (this.crust === "gluten") {
+    this.price += 3;
+  }
+}
+
+// Pizza.protoype.calcSauce = function () {
+//   if (this.sauce === "red") {
+//     this.price += 0;
+//   } else if (this.sauce === "garlic") {
+//     this.price += 1;
+//   }
+// }
+
 // Pizza.prototype.calcToppingPrice = (function) {
 //   for (var i = 0; i < this.toppings.length; i++) {
 //   if (this.cheese[i]) {
@@ -43,8 +62,9 @@ $(document).ready(function() {
     var inputCrust = $("#crust").val();
     var inputSauce = $("#sauce").val();
     var pizza = new Pizza (inputSize, inputCrust, inputSauce);
-    $("#size").val("");
-    $(".pizzacost").text(pizza.calcSizePrice(""));
-    // console.log(calcSizePrice);
+    pizza.calcSizePrice();
+    pizza.calcCrustPrice();
+    // pizza.calcSaucePrice();
+    $(".pizzacost").text(pizza.price);
   })
 })
