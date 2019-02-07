@@ -5,3 +5,7 @@ h1 {
 .multiple {
   display: none;
 }
+
+.pizzacost {
+  display: show;
+}
